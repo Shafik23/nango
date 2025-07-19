@@ -1,6 +1,6 @@
 # Nano Golang App
 
-A minimal template for creating single-binary web applications with Go.
+A nano template for creating single-binary web applications with Go.
 
 ## Features
 
@@ -13,17 +13,21 @@ A minimal template for creating single-binary web applications with Go.
 ## Quick Start
 
 ### Development
+
 ```bash
 go run main.go
 ```
+
 Visit http://localhost:8080
 
 ### Build for Linux
+
 ```bash
 CGO_ENABLED=0 GOOS=linux GOARCH=amd64 go build -ldflags="-s -w" -o app main.go
 ```
 
 ### Build for current platform
+
 ```bash
 go build -ldflags="-s -w" -o app main.go
 ```
@@ -31,6 +35,7 @@ go build -ldflags="-s -w" -o app main.go
 ## Deployment with Caddy
 
 Example Caddyfile:
+
 ```
 your.domain.com {
     reverse_proxy 127.0.0.1:8080
